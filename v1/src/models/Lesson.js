@@ -6,10 +6,14 @@ const LessonSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "teacher",
     },
-    student_id: {
-      type: mongoose.Types.ObjectId,
-      ref: "student",
-    },
+    students: [
+      {
+        student_id: {
+          type: mongoose.Types.ObjectId,
+          ref: "student",
+        },
+      },
+    ],
     name: {
       type: String,
       required: true,

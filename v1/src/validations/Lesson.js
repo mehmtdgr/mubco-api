@@ -8,9 +8,13 @@ const createValidation = Joi.object({
     "any.required": `Ad alanı boş bırakılamaz!`,
   }),
   teacher_id: Joi.string().required().min(1),
-  student_id: Joi.string().required().min(1),
+});
+
+const addStudentValidation = Joi.object({
+  student_id: Joi.string().required(),
 });
 
 module.exports = {
   createValidation,
+  addStudentValidation,
 };

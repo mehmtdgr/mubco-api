@@ -15,7 +15,7 @@ class LessonService extends BaseService {
         select: "name",
       })
       .populate({
-        path: "student_id",
+        path: "students.student_id",
         select: "name",
       });
 
